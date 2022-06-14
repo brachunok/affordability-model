@@ -1,15 +1,14 @@
-
-drought_file =
-output_file =
-income_distribution = ["state"]#,"low_income","high_income","inequality"]
-income_elasticity= [0.1]
-fee_passthrough = ["zero_threshold"]#,"one_tier","multi_tier"]
-reservoir_capacity = [2800]
-pay_back_period = [30] #[20,30,40]
-discount_rate = [3]#[1.5,3,4.5]
-mitigation_decision = ['baseline','market']
-build_decision = ['none','desal','grrp-r']# 'npr','grrp-r','grrp-l','dpr']
-water_cost = [22326.39]
-price_elasticity = [.1]#,0.4,0.8]#,0.8] #[-.25,0,.25,.5,.75,1,1.25,1.5,1.75,2,3,4,5,10]
-rate_structure = ['ibp']#["fixed","one_tier","ibp","dpb"]
-
+test "abcde"
+drought_file "~/Documents"
+output_file "~/Documents/__college/"
+income_distribution ["state"]
+income_elasticity [0.1]
+fee_passthrough ["zero_threshold"]
+reservoir_capacity  [2800]
+pay_back_period [30]
+discount_rate [3]
+mitigation_decision ['baseline','market']
+build_decision ['none','desal','grrp-r']
+water_cost [22326.39]
+price_elasticity [.1]
+rate_structure ['ibp']
