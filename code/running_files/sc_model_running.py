@@ -10,6 +10,9 @@ Created on Thu Jun  9 07:41:55 2022
 # instantiates it with the configuration, and runs it
 
 import sys
+sys.path.append("../model_files")
+from sc_model import SantaCruz
+
 file_name = sys.argv[1]
 
 
@@ -24,3 +27,7 @@ with open(file_name) as f:
     # the choice of mitigaiton, curtailment infrastructure size etc...
 
 # Now we instantiate our santa cruz class object with our given run parameters
+
+Model = SantaCruz(params)
+
+
