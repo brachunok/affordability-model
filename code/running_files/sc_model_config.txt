@@ -1,5 +1,5 @@
 test abcde
-drought_file /Users/brachuno/Documents/__college/reseach_stuff/affordability-model/data/sc_droughts.csv
+drought_path /Users/brachuno/Documents/__college/reseach_stuff/affordability-model/data/droughts
 output_path /Users/brachuno/Documents/__college/reseach_stuff/affordability-model/outputs
 income_distribution ["state"]
 income_elasticity [0.1]
@@ -12,3 +12,11 @@ build_decision ['none','desal','grrp-r']
 water_cost [22326.39]
 price_elasticity [.1]
 rate_structure ['ibp']
+MHI [68000]
+income_bins [7500,12500,17500,22500,27500,32500,37500,42500,47500,55000,67500,87500,112500,137500,175000,250000]
+household_sizes [1.870420, 1.875249, 2.201320, 2.373557 ,2.483636 ,2.583789 ,2.678085, 2.736607, 2.687910 ,2.792010, 2.883071, 2.947434, 3.085348, 3.139869 ,3.206045, 3.180690]
+household_counts [2365,1648,1456,1285,1424,1027,1018,1077,874,1931,2352,4064,3110,2091,3263,4895]
+leaks [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+base_charge 11.26
+tiers [6,2,2,999999]
+tier_prices [10.6,11.58,13.64,16.74]

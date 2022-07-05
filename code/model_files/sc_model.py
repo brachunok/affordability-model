@@ -4,6 +4,7 @@
 import json
 import os
 import pandas as pd
+import wrtools as wt
 
 class SantaCruz:
     def __init__(self,config):
@@ -21,12 +22,39 @@ class SantaCruz:
         # write the parameter options to the outputfile,
         self.write_params(params,"params.json")
 
-        # initiaize the drought scenarios
+        # initialize our sources
+        north_coast = wt.Inflow(self.drought_path+"/north_coast.csv")
+        felton_diversion = wt.Inflow(self.drought_path+"/felton_diversion.csv")
+        newell_inflow = wt.Inflow(self.drought_path+"/newell_inflow.csv")
+        tait_street = wt.Inflow(self.drought_path+"/tait_street.csv")
+        #TODO: add groundwater
 
-        # where i'm at: restructure the drought files to be one file for each
-        # source with n columns for n droughts
-        # in WR tools, make a class for each source, and when we initialize the source,
-        # read in the file to go along with it
+        #TODO: check they all have the same number of droughts as a little doublecheck-a-roo
+
+        # initialize our City
+        city = wt.City( self.income_elasticity, self.MHI)
+        city.set_bins(self.household_counts,self.income_bins,self.household_sizes,self.leaks)
+
+        # initialize utility object
+        ut = wt.Utility(self.discount_rate)
+
+        # set rates. (see readme for how these work)
+        ut.set_fixed_charge(self.base_charge)
+        ut.set_baseline_fixed_charge(self.base_charge)
+        ut.set_tier_prices(self.tier_prices)
+        ut.set_tiers(self.tiers)
+
+
+        #
+
+        # initialize demand
+        res_demand
+
+        non_res_demand
+
+
+
+
 
 
 
